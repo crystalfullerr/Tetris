@@ -1,0 +1,10 @@
+import pygame
+import random
+
+# Constants
+WIDTH, HEIGHT = 300, 600
+BLOCK_SIZE = 30
+GRID_WIDTH = WIDTH // BLOCK_SIZE
+GRID_HEIGHT = HEIGHT // BLOCK_SIZE
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
