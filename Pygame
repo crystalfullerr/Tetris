@@ -118,3 +118,10 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+def rotate_tetromino():
+    global current_tetromino
+    current_tetromino = [list(row) for row in zip(*reversed(current_tetromino))]
+    if check_collision():
+        # Revert the rotation if it causes a collision
+        current_tetromino = [list(row) for row in zip(*current_tetromino)]
