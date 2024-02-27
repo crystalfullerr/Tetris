@@ -125,3 +125,10 @@ def rotate_tetromino():
     if check_collision():
         # Revert the rotation if it causes a collision
         current_tetromino = [list(row) for row in zip(*current_tetromino)]
+
+def display_game_over():
+    font = pygame.font.Font(None, 36)
+    text = font.render("Game Over", True, WHITE)
+    screen.blit(text, (WIDTH // 2 - 70, HEIGHT // 2 - 20))
+    pygame.display.flip()
+    pygame.time.wait(2000)  # Display for 2 seconds
